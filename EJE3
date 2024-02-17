@@ -1,0 +1,26 @@
+/* Programa que intercambia peces entre Juan y Mary.
+   Juan tiene 10 peces payasos y Mary tiene 7 peces betta.
+   Por: [Franklin Bracamonte]
+   Para: [Programación I-UBA]
+*/
+#include <iostream>
+
+int main() {
+    int peces_juan = 10;
+    int peces_mary = 7;
+
+    std::cout << "Juan tiene " << peces_juan << " peces payasos y Mary tiene " << peces_mary << " peces betta.\n";
+
+    // Intercambio de peces
+    int temp = peces_juan;
+    peces_juan = peces_mary;
+    peces_mary = temp;
+
+    std::cout << "Después del intercambio, Juan tiene " << peces_juan << " peces betta y Mary tiene " << peces_mary << " peces payasos.\n";
+
+    // Pausar la ejecución antes de terminar el programa
+    std::cout << "Presiona cualquier tecla para salir...";
+    std::cin.get();
+
+    return 0;
+}
