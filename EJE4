@@ -1,0 +1,38 @@
+/* Programa que calcula la longitud de una circunferencia dado su radio.
+   Por: [Franklin Bracamonte]
+   Para: [Programación I-UBA]
+*/
+
+#include <iostream>
+#include <cmath> // Necesario para utilizar la constante M_PI
+
+#ifdef _WIN32
+#include <conio.h> // Para getch() en Windows
+#else
+#include <cstdio> // Para getchar() en sistemas no Windows
+#endif
+
+int main() {
+    // Declaración de variables
+    double radio, longitud;
+
+    // Lectura del radio de la circunferencia
+    std::cout << "Ingrese el radio de la circunferencia: ";
+    std::cin >> radio;
+
+    // Cálculo de la longitud de la circunferencia
+    longitud = 2 * M_PI * radio;
+
+    // Mostrar la longitud de la circunferencia
+    std::cout << "La longitud de la circunferencia con radio " << radio << " es: " << longitud << std::endl;
+
+    // Pausar la ejecución antes de terminar el programa
+    std::cout << "Presiona cualquier tecla para salir...";
+#ifdef _WIN32
+    _getch(); // Espera a que el usuario presione una tecla en Windows
+#else
+    getchar(); // Espera a que el usuario presione una tecla en sistemas no Windows
+#endif
+
+    return 0;
+}
