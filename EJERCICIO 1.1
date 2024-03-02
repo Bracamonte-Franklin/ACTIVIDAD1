@@ -1,0 +1,53 @@
+/* Programa que lee tres números enteros y visualiza el menor y el mayor de los tres números.
+   Por: [FRANKLIN BRACAMONTE]
+   Para: [PROGRAMACIÓN I-UBA]
+*/
+
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+    // Declaración de variables
+    int num1, num2, num3, menor, mayor;
+
+    // Lectura de los tres números enteros
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> num1;
+
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> num2;
+
+    std::cout << "Ingrese el tercer número: ";
+    std::cin >> num3;
+
+    // Suponemos que el primer número es el menor y el mayor
+    menor = num1;
+    mayor = num1;
+
+    // Comprobar y actualizar el menor
+    if (num2 < menor) {
+        menor = num2;
+    }
+    if (num3 < menor) {
+        menor = num3;
+    }
+
+    // Comprobar y actualizar el mayor
+    if (num2 > mayor) {
+        mayor = num2;
+    }
+    if (num3 > mayor) {
+        mayor = num3;
+    }
+
+    // Mostrar el menor y el mayor
+    std::cout << "El menor de los tres números es: " << menor << std::endl;
+    std::cout << "El mayor de los tres números es: " << mayor << std::endl;
+
+    // Esperar a que el usuario presione una tecla antes de salir
+    std::cout << "Presione cualquier tecla para salir...";
+    std::cin.get(); // Esperar a que el usuario presione una tecla
+    std::cin.get(); // Esperar a que el usuario presione otra tecla (para evitar que se cierre inmediatamente)
+
+    return 0;
+}
